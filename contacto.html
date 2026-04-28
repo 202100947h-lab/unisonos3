@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UNISONOS | Contáctanos</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-grid">
+      <div class="header-left">
+        <div class="socials">
+          <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#"><i class="fa-brands fa-pinterest-p"></i></a>
+          <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+        </div>
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="experiencias.html" class="nav-link">Experiencias</a>
+      </div>
+
+      <div class="brand-center">
+        <a href="index.html">UNISONOS</a>
+      </div>
+
+      <div class="header-right">
+        <a href="contacto.html" class="nav-link active">Contáctanos</a>
+        <button class="sound-toggle" id="soundToggle" aria-label="Encender o apagar sonido">
+          <i class="fa-solid fa-volume-high"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <audio id="siteAudio" loop>
+    <source src="assets/audio/unisonos.mp3" type="audio/mpeg">
+  </audio>
+
+  <main>
+    <section class="contact-filmstrip">
+      <div class="filmstrip-shell">
+        <div class="filmstrip-track">
+          <figure class="filmshot"><img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?q=80&w=800&auto=format&fit=crop" alt="Escena 1"></figure>
+          <figure class="filmshot"><img src="https://images.unsplash.com/photo-1612225330812-01a9c6b355ec?q=80&w=800&auto=format&fit=crop" alt="Escena 2"></figure>
+          <figure class="filmshot"><img src="https://images.unsplash.com/photo-1505236858219-8359eb29e329?q=80&w=800&auto=format&fit=crop" alt="Escena 3"></figure>
+          <figure class="filmshot"><img src="https://images.unsplash.com/photo-1508807526345-15e9b5f4eaff?q=80&w=800&auto=format&fit=crop" alt="Escena 4"></figure>
+          <figure class="filmshot"><img src="https://images.unsplash.com/photo-1563298723-dcfebaa392e3?q=80&w=800&auto=format&fit=crop" alt="Escena 5"></figure>
+          
+          <figure class="filmshot"><img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?q=80&w=800&auto=format&fit=crop" alt="Escena 1"></figure>
+          <figure class="filmshot"><img src="https://images.unsplash.com/photo-1612225330812-01a9c6b355ec?q=80&w=800&auto=format&fit=crop" alt="Escena 2"></figure>
+          <figure class="filmshot"><img src="https://images.unsplash.com/photo-1505236858219-8359eb29e329?q=80&w=800&auto=format&fit=crop" alt="Escena 3"></figure>
+          <figure class="filmshot"><img src="https://images.unsplash.com/photo-1508807526345-15e9b5f4eaff?q=80&w=800&auto=format&fit=crop" alt="Escena 4"></figure>
+          <figure class="filmshot"><img src="https://images.unsplash.com/photo-1563298723-dcfebaa392e3?q=80&w=800&auto=format&fit=crop" alt="Escena 5"></figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact-split">
+      <div class="container">
+        <form class="contact-grid" action="enviar.php" method="POST">
+          
+          <!-- Toggle oculto para abrir/cerrar el panel -->
+          <input type="checkbox" id="toggle-event-panel" class="event-toggle">
+
+          <div class="contact-form-card">
+            <h2>Contáctanos</h2>
+            <p class="contact-intro">
+              Cuéntanos la naturaleza de tu evento y trazaremos una experiencia con carácter,
+              sensibilidad estética y una ejecución impecable.
+            </p>
+
+            <div class="form-grid">
+              <input type="text" name="nombre" placeholder="Nombre" required>
+              <input type="email" name="correo" placeholder="Correo" required>
+              <input type="text" name="empresa" placeholder="Nombre de compañía" required>
+
+              <label for="toggle-event-panel" class="event-trigger">
+                <span>Haz tu evento</span>
+                <span class="event-trigger-icon">+</span>
+              </label>
+
+              <label class="terms">
+                <input type="checkbox" name="terminos" required>
+                <span>He leído y acepto los términos y condiciones para el tratamiento de mis datos y el contacto posterior.</span>
+              </label>
+
+              <button type="submit" class="btn btn-primary">Enviar</button>
+            </div>
+          </div>
+
+          <div class="contact-image-card">
+            <div class="selected-services-panel">
+              <h4>Tu selección</h4>
+              <div class="selected-services-list">
+                <span>Abre “Haz tu evento” para elegir opciones</span>
+              </div>
+            </div>
+
+            <img src="https://images.unsplash.com/photo-1596484552834-6a58f850e0a1?q=80&w=1080&auto=format&fit=crop" alt="Danza cusqueña diablada">
+          </div>
+
+          <!-- Panel desplegable hacia la imagen -->
+          <aside class="event-panel">
+            <div class="event-panel-inner">
+              <div class="event-panel-head">
+                <div>
+                  <h3>Haz tu evento</h3>
+                  <p>Selecciona los elementos que deseas incorporar en tu experiencia.</p>
+                </div>
+
+                <label for="toggle-event-panel" class="event-panel-close">×</label>
+              </div>
+
+              <div class="checklist-options panel-grid">
+                <label class="check-item"><input type="checkbox" name="evento[]" value="Música en vivo"> Música en vivo</label>
+                <label class="check-item"><input type="checkbox" name="evento[]" value="Orquesta de cámara"> Orquesta de cámara</label>
+                <label class="check-item"><input type="checkbox" name="evento[]" value="Solistas"> Solistas</label>
+                <label class="check-item"><input type="checkbox" name="evento[]" value="Danza clásica / contemporánea"> Danza clásica / contemporánea</label>
+                <label class="check-item"><input type="checkbox" name="evento[]" value="Danza folclórica"> Danza folclórica</label>
+                <label class="check-item"><input type="checkbox" name="evento[]" value="Producción audiovisual"> Producción audiovisual</label>
+                <label class="check-item"><input type="checkbox" name="evento[]" value="Iluminación escénica"> Iluminación escénica</label>
+                <label class="check-item"><input type="checkbox" name="evento[]" value="Ambientación y decoración"> Ambientación y decoración</label>
+                <label class="check-item"><input type="checkbox" name="evento[]" value="Catering / maridaje"> Catering / maridaje</label>
+                <label class="check-item"><input type="checkbox" name="evento[]" value="Curaduría artística"> Curaduría artística</label>
+              </div>
+
+              <label for="toggle-event-panel" class="btn btn-primary event-panel-confirm">
+                Confirmar
+              </label>
+            </div>
+          </aside>
+
+        </form>
+      </div>
+    </section>
+
+
+
+  </main>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

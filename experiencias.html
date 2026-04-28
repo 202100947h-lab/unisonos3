@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UNISONOS | Experiencias</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-grid">
+      <div class="header-left">
+        <div class="socials">
+          <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#"><i class="fa-brands fa-pinterest-p"></i></a>
+          <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+        </div>
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="experiencias.html" class="nav-link active">Experiencias</a>
+      </div>
+
+      <div class="brand-center">
+        <a href="index.html">UNISONOS</a>
+      </div>
+
+      <div class="header-right">
+        <a href="contacto.html" class="nav-link">Contáctanos</a>
+        <button class="sound-toggle" id="soundToggle" aria-label="Encender o apagar sonido">
+          <i class="fa-solid fa-volume-high"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <audio id="siteAudio" loop>
+    <source src="assets/audio/unisonos.mp3" type="audio/mpeg">
+  </audio>
+
+  <main>
+    <section class="experiences-hero">
+        <div class="crossfade-slide active">
+          <img src="https://images.unsplash.com/photo-1514320291840-2e0a9bf2a9ae?q=80&w=1920&auto=format&fit=crop" alt="Experiencia 1">
+        </div>
+        <div class="crossfade-slide">
+            <img src="https://images.unsplash.com/photo-1503095396549-807759245b35?q=80&w=1920&auto=format&fit=crop" alt="Experiencia 2">
+        </div>
+        <div class="crossfade-slide">
+            <img src="https://images.unsplash.com/photo-1509021436665-8f07dbf5bf1d?q=80&w=1920&auto=format&fit=crop" alt="Experiencia 3">
+        </div>
+      <div class="crossfade-overlay"></div>
+
+      <div class="hero-content">
+        <div>
+          <h1>Experiencias que permanecen</h1>
+          <p>
+            Diseñamos atmósferas donde la música, la cultura y la puesta en escena
+            conviven con naturalidad, dejando una impresión serena y duradera.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-gallery-vogue">
+      <div class="container">
+        <h2 class="section-title">Galería</h2>
+        <p class="section-copy">
+          Un mosaico de instantes curados por la sensibilidad del espacio, la luz y el gesto.
+        </p>
+
+        <div class="gallery-mosaic">
+          <article class="mosaic-card tall"><img src="https://images.unsplash.com/photo-1544531585-802dc21ebdd1?q=80&w=800&auto=format&fit=crop" alt="Galería 1"></article>
+          <article class="mosaic-card"><img src="https://images.unsplash.com/photo-1520523839897-bd0b52f945a0?q=80&w=800&auto=format&fit=crop" alt="Galería 2"></article>
+          <article class="mosaic-card tall"><img src="https://images.unsplash.com/photo-1508997449629-303059a039c0?q=80&w=800&auto=format&fit=crop" alt="Galería 3"></article>
+          <article class="mosaic-card"><img src="https://images.unsplash.com/photo-1465847899084-d164df4dedc6?q=80&w=800&auto=format&fit=crop" alt="Galería 4"></article>
+          <article class="mosaic-card wide"><img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?q=80&w=1200&auto=format&fit=crop" alt="Galería 5"></article>
+          <article class="mosaic-card"><img src="https://images.unsplash.com/photo-1531058020387-3be344556be6?q=80&w=800&auto=format&fit=crop" alt="Galería 6"></article>
+        </div>
+
+        <div class="gallery-actions">
+          <a href="#" class="btn btn-outline">Ver más</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-events-editorial">
+      <div class="container">
+        <div class="section-heading">
+          <h2 class="section-title">Eventos</h2>
+          <p class="section-copy">
+        </div>
+          <!--Formatos vivos, elegantes y versátiles para celebrar, convocar y emocionar con intención.-->
+        </p>
+      
+
+        <div class="events-editorial-grid">
+          <article class="event-card event-large">
+            <img src="https://images.unsplash.com/photo-1460723237483-7a6dc9d0b212?q=80&w=1080&auto=format&fit=crop" alt="Concierto íntimo">
+            <div class="event-overlay">
+              <span>Concierto íntimo</span>
+              <h3>Noches de Cámara</h3>
+              <p>Música que se siente a flor de piel.</p>
+            </div>
+          </article>
+
+          <article class="event-card event-medium">
+            <img src="https://images.unsplash.com/photo-1518998053401-a414539685ce?q=80&w=1080&auto=format&fit=crop" alt="Exposición">
+            <div class="event-overlay">
+              <span>Exposición</span>
+              <h3>Luz y Materia</h3>
+              <p>Un diálogo entre forma, textura y emoción.</p>
+            </div>
+          </article>
+
+          <article class="event-card event-tall">
+            <img src="https://images.unsplash.com/photo-1561489422-45de3d015e3e?q=80&w=1080&auto=format&fit=crop" alt="Gala cultural">
+            <div class="event-overlay">
+              <span>Gala cultural</span>
+              <h3>Ecos del Patrimonio</h3>
+              <p>Una noche concebida para honrar nuestras raíces.</p>
+            </div>
+          </article>
+
+          <article class="event-card event-small">
+            <img src="https://images.unsplash.com/photo-1505236858219-8359eb29e329?q=80&w=1080&auto=format&fit=crop" alt="Recitales">
+            <div class="event-overlay">
+              <span>Recitales</span>
+              <h3>Voces que permanecen</h3>
+              <p>Palabras que inspiran, emociones que quedan.</p>
+            </div>
+          </article>
+
+          <article class="event-card event-wide">
+            <img src="https://images.unsplash.com/photo-1528605248644-14dd04022da1?q=80&w=1200&auto=format&fit=crop" alt="Encuentros">
+            <div class="event-overlay">
+              <span>Encuentros</span>
+              <h3>Conversaciones que inspiran</h3>
+              <p>Ideas que conectan, historias que transforman.</p>
+            </div>
+          </article>
+        </div>
+
+        <div class="gallery-actions">
+          <a href="#" class="btn btn-primary">Ver más</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

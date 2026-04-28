@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UNISONOS | Home</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-grid">
+      <div class="header-left">
+        <div class="socials">
+          <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" aria-label="Pinterest"><i class="fa-brands fa-pinterest-p"></i></a>
+          <a href="#" aria-label="Twitter X"><i class="fa-brands fa-x-twitter"></i></a>
+        </div>
+        <a href="index.html" class="nav-link active">Home</a>
+        <a href="experiencias.html" class="nav-link">Experiencias</a>
+      </div>
+
+      <div class="brand-center">
+        <a href="index.html">UNISONOS</a>
+      </div>
+
+      <div class="header-right">
+        <a href="contacto.html" class="nav-link">Contáctanos</a>
+        <button class="sound-toggle" id="soundToggle" aria-label="Encender o apagar sonido">
+          <i class="fa-solid fa-volume-high"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <audio id="siteAudio" loop>
+    <source src="assets/audio/unisonos.mp3" type="audio/mpeg">
+  </audio>
+
+  <main>
+    <section class="hero-home">
+      <div class="hero-media" id="heroMedia">
+        <img src="assets/home/portadaUNISONOS.gif" alt="Portada UNISONOS">
+        <div class="hero-overlay"></div>
+      </div>
+
+      <div class="hero-content">
+        <div>
+          <h1>Donde la emoción se convierte en presencia</h1>
+          <p>
+            UNISONOS imagina atmósferas donde la música, la escena y el detalle
+            encuentran una forma delicada de permanecer en la memoria.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="image-slider section">
+      <div class="container">
+        <h2 class="section-title">Una narrativa visual en movimiento</h2>
+        <p class="section-copy">
+          Escenarios, gestos y texturas reunidos bajo una misma dirección estética.
+        </p>
+
+        <div class="slider-frame">
+          <div class="slider-track" id="mainSliderTrack">
+            <article class="slide-item">
+              <img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?q=80&w=1080&auto=format&fit=crop" alt="Cena editorial">
+              <div class="slide-caption">Escenas concebidas con intención</div>
+            </article>
+            <article class="slide-item">
+              <img src="https://images.unsplash.com/photo-1508997449629-303059a039c0?q=80&w=1080&auto=format&fit=crop" alt="Moda y escena">
+              <div class="slide-caption">Presencia, ritmo y elegancia</div>
+            </article>
+            <article class="slide-item">
+              <img src="https://images.unsplash.com/photo-1520523839897-bd0b52f945a0?q=80&w=1080&auto=format&fit=crop" alt="Piano en sala patrimonial">
+              <div class="slide-caption">Música, arquitectura y memoria</div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="clients-section">
+      <div class="container">
+        <h2 class="section-title">Nuestros clientes</h2>
+        <p class="section-copy">
+          Instituciones, marcas y espacios que han confiado en una dirección sensible,
+          precisa y memorable para dar forma a sus momentos más importantes.
+        </p>
+
+        <div class="clients-carousel">
+          <div class="clients-track" id="clientsTrack">
+            <article class="client-card" data-video="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1">
+              <div class="client-thumb">
+                <img src="https://images.unsplash.com/photo-1518998053401-a414539685ce?q=80&w=800&auto=format&fit=crop" alt="Cliente 1">
+              </div>
+              <div class="client-info">
+                <h3>Fundación Casa del Arte</h3>
+                <p>Programación visual y presencia cultural.</p>
+              </div>
+            </article>
+
+            <article class="client-card" data-video="https://www.youtube.com/embed/ysz5S6PUM-U?autoplay=1">
+              <div class="client-thumb">
+                <img src="https://images.unsplash.com/photo-1465847899084-d164df4dedc6?q=80&w=800&auto=format&fit=crop" alt="Cliente 2">
+              </div>
+              <div class="client-info">
+                <h3>Festival Internacional de Música</h3>
+                <p>Escena, atmósfera y dirección editorial.</p>
+              </div>
+            </article>
+
+            <article class="client-card" data-video="https://www.youtube.com/embed/tgbNymZ7vqY?autoplay=1">
+              <div class="client-thumb">
+                <img src="https://images.unsplash.com/photo-1531058020387-3be344556be6?q=80&w=800&auto=format&fit=crop" alt="Cliente 3">
+              </div>
+              <div class="client-info">
+                <h3>Museo de Arte Contemporáneo</h3>
+                <p>Difusión visual y experiencia inmersiva.</p>
+              </div>
+            </article>
+
+            <article class="client-card" data-video="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1">
+              <div class="client-thumb">
+                <img src="https://images.unsplash.com/photo-1561489422-45de3d015e3e?q=80&w=800&auto=format&fit=crop" alt="Cliente 4">
+              </div>
+              <div class="client-info">
+                <h3>Instituto Cultural Iberoamericano</h3>
+                <p>Eventos con presencia sobria y memorable.</p>
+              </div>
+            </article>
+
+            <article class="client-card" data-video="https://www.youtube.com/embed/ysz5S6PUM-U?autoplay=1">
+              <div class="client-thumb">
+                <img src="https://images.unsplash.com/photo-1518998053401-a414539685ce?q=80&w=800&auto=format&fit=crop" alt="Cliente 1">
+              </div>
+              <div class="client-info">
+                <h3>Fundación Casa del Arte</h3>
+                <p>Programación visual y presencia cultural.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <div class="gallery-actions">
+          <a href="experiencias.html" class="btn btn-primary">Ver más clientes</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
