@@ -685,301 +685,137 @@ select {
 }
 
 /* ===================================================== */
-/* CORRECCIÓN CONTACTO: FORMULARIO + IMAGEN EN UNA FILA */
+/* FIX FINAL CONTACTO: FORMULARIO IZQUIERDA + IMAGEN DERECHA */
 /* ===================================================== */
 
 .contact-grid {
   display: grid !important;
-  grid-template-columns: minmax(420px, 0.95fr) minmax(620px, 1.45fr) !important;
+  grid-template-columns: minmax(300px, 0.85fr) minmax(360px, 1.15fr) !important;
   gap: 28px !important;
   align-items: stretch !important;
-  width: min(1280px, 94%) !important;
-  margin: 0 auto !important;
+  width: min(1280px, 96vw) !important;
+  max-width: 1280px !important;
+  margin: 36px auto 80px !important;
+  position: relative !important;
+  box-sizing: border-box !important;
 }
 
-/* Asegura que ambos bloques pertenezcan a la misma fila */
-.contact-form-card,
-.contact-image-card {
+/* Formulario e imagen dentro de la misma fila */
+.contact-grid > .contact-form-card {
+  grid-column: 1 / 2 !important;
+  grid-row: 1 / 2 !important;
   width: 100% !important;
+  max-width: none !important;
   min-width: 0 !important;
   height: auto !important;
-}
-
-/* El formulario se mantiene a la izquierda */
-.contact-form-card {
-  grid-column: 1 !important;
+  margin: 0 !important;
   align-self: stretch !important;
 }
 
-/* La imagen se mantiene a la derecha */
-.contact-image-card {
-  grid-column: 2 !important;
+.contact-grid > .contact-image-card {
+  grid-column: 2 / 3 !important;
+  grid-row: 1 / 2 !important;
+  width: 100% !important;
+  max-width: none !important;
+  min-width: 0 !important;
+  height: auto !important;
+  min-height: clamp(520px, 52vw, 720px) !important;
+  margin: 0 !important;
   align-self: stretch !important;
-  min-height: 860px !important;
 }
 
-/* La imagen llena correctamente su columna */
-.contact-image-card img {
+/* Imagen adaptada al alto de su tarjeta */
+.contact-grid > .contact-image-card img {
   width: 100% !important;
   height: 100% !important;
-  min-height: 860px !important;
+  min-height: clamp(520px, 52vw, 720px) !important;
   object-fit: cover !important;
+  object-position: center !important;
   display: block !important;
 }
 
-/* El panel desplegable sigue funcionando encima de la sección */
+/* Ajuste del formulario para que no se vea demasiado ancho */
+.contact-form-card {
+  padding: 42px 34px !important;
+  box-sizing: border-box !important;
+}
+
+.contact-form-card h2 {
+  font-size: clamp(2.4rem, 3.4vw, 4rem) !important;
+}
+
+/* El panel desplegable se mantiene sobre la misma sección */
 .event-panel {
   position: absolute !important;
   top: 0 !important;
   right: 0 !important;
+  width: calc(54% - 8px) !important;
+  height: 100% !important;
+  z-index: 4 !important;
 }
 
-/* RESPONSIVE: recién en pantallas pequeñas baja uno debajo del otro */
-@media (max-width: 1100px) {
+/* En pantallas medianas sigue en dos columnas */
+@media (min-width: 761px) and (max-width: 1100px) {
   .contact-grid {
-    grid-template-columns: 1fr !important;
-    width: min(760px, 94%) !important;
+    grid-template-columns: minmax(290px, 0.9fr) minmax(330px, 1.1fr) !important;
+    gap: 20px !important;
+    width: min(1000px, 96vw) !important;
   }
 
   .contact-form-card {
-    grid-column: 1 !important;
+    padding: 34px 24px !important;
   }
 
-  .contact-image-card {
-    grid-column: 1 !important;
-    min-height: 620px !important;
+  .contact-form-card h2 {
+    font-size: clamp(2.2rem, 4vw, 3.4rem) !important;
   }
 
-  .contact-image-card img {
-    min-height: 620px !important;
+  .contact-intro {
+    font-size: 0.95rem !important;
+    line-height: 1.7 !important;
+  }
+
+  .form-grid {
+    gap: 14px !important;
+  }
+
+  .contact-grid > .contact-image-card,
+  .contact-grid > .contact-image-card img {
+    min-height: 560px !important;
+  }
+}
+
+/* Solo en celular se apila */
+@media (max-width: 760px) {
+  .contact-grid {
+    grid-template-columns: 1fr !important;
+    gap: 18px !important;
+    width: min(100%, 92vw) !important;
+    margin: 28px auto 56px !important;
+  }
+
+  .contact-grid > .contact-form-card {
+    grid-column: 1 / 2 !important;
+    grid-row: 1 / 2 !important;
+  }
+
+  .contact-grid > .contact-image-card {
+    grid-column: 1 / 2 !important;
+    grid-row: 2 / 3 !important;
+    min-height: 520px !important;
+  }
+
+  .contact-grid > .contact-image-card img {
+    min-height: 520px !important;
   }
 
   .event-panel {
     position: fixed !important;
-    inset: 20px !important;
+    inset: 18px !important;
     width: auto !important;
     height: auto !important;
   }
 }
-
-@media (max-width: 640px) {
-  .contact-grid {
-    gap: 18px !important;
-    width: min(100%, 92%) !important;
-  }
-
-  .contact-form-card {
-    padding: 34px 22px !important;
-    border-radius: 24px !important;
-  }
-
-  .contact-image-card {
-    min-height: 520px !important;
-    border-radius: 24px !important;
-  }
-
-  .contact-image-card img {
-    min-height: 520px !important;
-  }
-}
-
-/* ESTADO ABIERTO */
-.event-toggle:checked ~ .contact-form-card .event-trigger-icon {
-  transform: rotate(45deg);
-}
-
-.event-toggle:checked ~ .contact-image-card img {
-  filter: brightness(0.45);
-  transform: scale(1.03);
-}
-
-.event-toggle:checked ~ .contact-image-card .selected-services-panel {
-  opacity: 0;
-  transform: translateY(-10px);
-}
-
-.event-toggle:checked ~ .event-panel {
-  opacity: 1;
-  visibility: visible;
-  pointer-events: auto;
-  transform: translateX(0);
-}
-
-
-/*Responivde del primer contaco su imagen y formulario*/
-@media (max-width: 1100px) {
-  .contact-split .container {
-    width: min(96%, 1100px);
-  }
-
-  .contact-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .contact-image-card,
-  .contact-image-card img {
-    min-height: 620px;
-  }
-}
-
-@media (max-width: 768px) {
-  .contact-form-card {
-    padding: 28px 20px;
-  }
-
-  .contact-image-card,
-  .contact-image-card img {
-    min-height: 500px;
-  }
-}
-
-/* RESPONSIVE */
-@media (max-width: 1100px) {
-  .contact-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .contact-image-card,
-  .contact-image-card img {
-    min-height: 620px;
-  }
-
-  .event-panel {
-    width: 100%;
-  }
-}
-
-@media (max-width: 768px) {
-  .contact-form-card {
-    padding: 28px 20px;
-  }
-
-  .contact-image-card,
-  .contact-image-card img {
-    min-height: 500px;
-  }
-
-  .event-panel-inner {
-    padding: 22px 18px;
-  }
-
-  .panel-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .selected-services-panel {
-    left: 16px;
-    right: 16px;
-    top: 16px;
-  }
-}
-
-
-
-
-/*===========================================*/
-@media (max-width: 1100px) {
-  .gallery-mosaic {
-    grid-template-columns: repeat(2, 1fr);
-    grid-auto-rows: 240px;
-  }
-
-  .mosaic-card.tall,
-  .mosaic-card.wide {
-    grid-column: auto;
-    grid-row: auto;
-  }
-
-  .events-editorial-grid {
-    grid-template-columns: repeat(2, 1fr);
-    grid-auto-rows: 240px;
-  }
-
-  .event-large,
-  .event-medium,
-  .event-tall,
-  .event-small,
-  .event-wide {
-    grid-column: auto;
-    grid-row: auto;
-  }
-
-  .contact-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .contact-image-card,
-  .contact-image-card img {
-    min-height: 620px;
-  }
-}
-
-@media (max-width: 768px) {
-  .header-grid {
-    grid-template-columns: 1fr;
-    padding: 18px 0;
-  }
-
-  .header-left,
-  .header-right,
-  .brand-center {
-    justify-content: center;
-    text-align: center;
-  }
-
-  .header-left,
-  .header-right {
-    flex-wrap: wrap;
-  }
-
-  .hero-content h1 {
-    font-size: clamp(2.5rem, 10vw, 4rem);
-  }
-
-  .gallery-mosaic,
-  .events-editorial-grid {
-    grid-template-columns: 1fr;
-    grid-auto-rows: auto;
-  }
-
-  .mosaic-card,
-  .event-card {
-    min-height: 280px;
-  }
-
-  .slider-frame,
-  .slide-item {
-    min-height: 54vh;
-    height: 54vh;
-  }
-
-  .filmshot {
-    min-width: 200px;
-    height: 132px;
-  }
-
-  .contact-form-card {
-    padding: 28px 20px;
-  }
-
-  .contact-form-card h2 {
-    font-size: 2.7rem;
-  }
-
-  .selected-services-panel {
-    left: 16px;
-    right: 16px;
-    top: 16px;
-  }
-
-  .contact-image-card,
-  .contact-image-card img {
-    min-height: 500px;
-  }
-}
-
-
-
 
 
 
