@@ -684,9 +684,9 @@ select {
   width: min(1600px, 96%);
 }
 
-.contact-grid {
+/*.contact-grid {
   grid-template-columns: minmax(420px, 0.95fr) minmax(620px, 1.45fr);
-}
+}*/
 
 .event-toggle {
   position: absolute;
