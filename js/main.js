@@ -118,3 +118,22 @@ function initSelectedServicesPanel() {
 
   }
 }
+
+const checkboxes = document.querySelectorAll('.checklist-options input[type="checkbox"]');
+const servicesList = document.querySelector('.selected-services-list');
+
+function updateSelection() {
+  const selected = [...checkboxes]
+    .filter(cb => cb.checked)
+    .map(cb => cb.value);
+
+  if (selected.length === 0) {
+    servicesList.innerHTML = '<span>Abre "Haz tu evento" para elegir opciones</span>';
+  } else {
+    servicesList.innerHTML = selected
+      .map(s => `<span>${s}</span>`)
+      .join('');
+  }
+}
+
+checkboxes.forEach(cb => cb.addEventListener('change', updateSelection));
