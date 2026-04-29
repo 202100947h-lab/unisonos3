@@ -1149,8 +1149,9 @@ select {
 }
 
 
+
 /*========================================================*/
-/*=========================CONTACTANOS===============================
+/*=========================CONTACTANOS===============================*/
 .film-roll {
   margin-top: 80px;
   height: 180px;
@@ -1293,7 +1294,7 @@ select {
   transform: translateY(-2px);
   background: #3a3024;
   border-color: #3a3024;
-}============*/
+}
 
 /* PANEL */
 .checklist-panel {
